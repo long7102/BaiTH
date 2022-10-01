@@ -1,22 +1,28 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View } from 'react-native';
-import Navigation from './src/navigation';
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ * @flow strict-local
+ */
 
+import React from 'react';
+import {SafeAreaView, StyleSheet} from 'react-native';
 
-export default function App() {
+import Navigation from './screen/navigation';
+const App = () => {
   return (
-    <View style={styles.container}>
-      
-      <Navigation/>
-
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.root}>
+      <Navigation />
+    </SafeAreaView>
   );
-}
+};
 
 const styles = StyleSheet.create({
-  container: {
+  root: {
     flex: 1,
-    backgroundColor: '#F9FBFC'
+    backgroundColor: 'black',
   },
 });
+
+export default App;
